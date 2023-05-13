@@ -64,7 +64,7 @@ board.push(result.move)
 ```
 
 Moves can also be undone with `board.pop`. See the `chess` package documentation [here](https://python-chess.readthedocs.io/en/latest/index.html) for additional information on how to manipulate the board.
-```
+```python3
 board.pop()
 ```
 Board manipulation is great to know for implementing a more advanced engine but let's stick with `FirstMoveEngine` for now. 
