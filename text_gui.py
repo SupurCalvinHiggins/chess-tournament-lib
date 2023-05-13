@@ -12,8 +12,11 @@ class TextGui(BaseGui):
     @staticmethod
     def gui_callback(result: EngineResult, board: chess.Board) -> None:
         print(f"result = {result}")
-        print(board)
         print()
+        print(board)
 
     def start(self) -> None:
-        self.match.play()
+        board = chess.Board()
+        print(board)
+        outcome = self.match.play(board)
+        print(f"outcome = {outcome}")

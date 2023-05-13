@@ -19,8 +19,7 @@ class UnlimitedTimeMatch(BaseMatch):
     def add_gui_callback(self, gui_callback: GuiCallback) -> None:
         self.gui_callbacks.append(gui_callback)
 
-    def play(self) -> chess.Outcome:
-        board = chess.Board()
+    def play(self, board: chess.Board) -> chess.Outcome:
         current_engine, next_engine = self.white_engine, self.black_engine
         while board.outcome() is None:
             result = current_engine.go(board, None)

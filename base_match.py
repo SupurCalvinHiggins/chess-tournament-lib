@@ -9,5 +9,5 @@ class BaseMatch(abc.ABC):
         pass
 
     @abc.abstractmethod
-    def play(self) -> chess.Outcome:
+    def play(self, board: chess.Board) -> chess.Outcome:
         pass
