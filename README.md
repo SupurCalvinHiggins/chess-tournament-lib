@@ -69,7 +69,7 @@ board.pop()
 ```
 Board manipulation is great to know for implementing a more advanced engine but let's stick with `FirstMoveEngine` for now. 
 
-Let's try out our engine against `RandomEngine` which makes random moves. We will `UnlimitedTimeMatch` from `chess_tournament.match` to simplify the game logic. 
+Let's try out our engine against `RandomEngine` which makes random moves. We will use `UnlimitedTimeMatch` from `chess_tournament.match` to simplify the game logic. 
 ```python3
 from chess_tournament.match import UnlimitedTimeMatch
 from chess_tournament.engine import RandomEngine
