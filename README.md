@@ -14,6 +14,7 @@ Navigate to the root directory of the repository and execute
 ```bash
 install.bat
 ```
+If the smoke tests passed, the installation is complete.
 
 ### Linux
 
@@ -23,6 +24,7 @@ mv install.bat install.sh
 chmod +x install.sh
 ./install.sh
 ```
+If the smoke tests passed, the installation is complete.
 
 ## Examples
 
