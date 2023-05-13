@@ -1,8 +1,10 @@
 import abc
 import chess
+from typing import Optional
+from engine_result import EngineResult
 
 
 class BaseEngine(abc.ABC):
     @abc.abstractmethod
-    def go(self, board: chess.Board) -> chess.Move:
+    def go(self, board: chess.Board, time: Optional[float] = None) -> EngineResult:
         pass
