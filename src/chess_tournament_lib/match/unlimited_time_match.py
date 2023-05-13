@@ -1,9 +1,8 @@
 import chess
-from typing import Optional
-from gui_callback import GuiCallback
-from base_match import BaseMatch
-from base_engine import BaseEngine
-from checked_engine import CheckedEngine
+from ..gui.gui_callback import GuiCallback
+from .base_match import BaseMatch
+from ..engine.base_engine import BaseEngine
+from ..engine.checked_engine import CheckedEngine
 
 
 class UnlimitedTimeMatch(BaseMatch):

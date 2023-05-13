@@ -1,7 +1,7 @@
 import chess
-from base_gui import BaseGui
-from base_match import BaseMatch
-from engine_result import EngineResult
+from .base_gui import BaseGui
+from ..match.base_match import BaseMatch
+from ..engine.engine_result import EngineResult
 
 
 class TextGui(BaseGui):

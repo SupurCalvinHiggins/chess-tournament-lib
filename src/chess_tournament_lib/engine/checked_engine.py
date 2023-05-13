@@ -1,8 +1,8 @@
 import copy
 import chess
 from typing import Optional
-from base_engine import BaseEngine
-from engine_result import EngineResult
+from .base_engine import BaseEngine
+from .engine_result import EngineResult
 
 
 class CheckedEngine(BaseEngine):

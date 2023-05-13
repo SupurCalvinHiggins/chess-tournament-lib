@@ -1,7 +1,7 @@
 import abc
 import chess
 from typing import Optional
-from engine_result import EngineResult
+from .engine_result import EngineResult
 
 
 class BaseEngine(abc.ABC):
