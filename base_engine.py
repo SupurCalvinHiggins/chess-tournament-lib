@@ -6,5 +6,5 @@ from engine_result import EngineResult
 
 class BaseEngine(abc.ABC):
     @abc.abstractmethod
-    def go(self, board: chess.Board, time: Optional[float] = None) -> EngineResult:
+    def go(self, board: chess.Board, time: Optional[float]) -> EngineResult:
         pass

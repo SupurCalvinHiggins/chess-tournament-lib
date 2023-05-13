@@ -9,8 +9,8 @@ class CheckedEngine(BaseEngine):
     def __init__(self, engine: BaseEngine) -> None:
         self.engine = engine
 
-    def go(self, board: chess.Board, time: Optional[float] = None) -> EngineResult:
+    def go(self, board: chess.Board, time: Optional[float]) -> EngineResult:
         assert board.outcome() is None
-        result = self.engine.go(copy.deepcopy(board))
+        result = self.engine.go(copy.deepcopy(board), time)
         assert result.move in board.legal_moves
         return result
