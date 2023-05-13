@@ -1,6 +1,6 @@
 # chess-tournament-lib
 
-Some utilities for a simple custom chess engine tournament with the python-chess package.
+Some utilities for a simple custom chess engine tournament with the `chess` package.
 
 ## Overview
 
@@ -61,7 +61,13 @@ However, this does not actually make the move on the board. Let's do that now.
 board.push(result.move)
 ```
 
-But how can we play against another engine? Well `chess_tournament` provides several classes for this purpose. Let's use an `UnlimitedTimeMatch` to play against `RandomEngine` which makes random moves. 
+Moves can also be undone with `board.pop`. See the `chess` package documentation [here](https://python-chess.readthedocs.io/en/latest/index.html) for additional information on how to manipulate the board.
+```
+board.pop()
+```
+Board manipulation is great to know for implementing a more advanced engine but let's stick with `FirstMoveEngine` for now. 
+
+Let's try out our engine against `RandomEngine` which makes random moves. We will `UnlimitedTimeMatch` from `chess_tournament.match` to simplify the game logic. 
 ```python3
 from chess_tournament.match import UnlimitedTimeMatch
 from chess_tournament.engine import RandomEngine
