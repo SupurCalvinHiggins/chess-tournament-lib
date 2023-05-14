@@ -6,8 +6,8 @@ build:
     python: "3.9"
   jobs:
     pre_install:
-      - bash mv install.bat install.sh
-      - bash chmod +x install.sh
+      - mv install.bat install.sh
+      - chmod +x install.sh
       - bash ./install.sh
 
 mkdocs:
