@@ -1,0 +1,17 @@
+site_name: My Docs
+theme: material
+nav:
+    - Home: 'index.md'
+    - Engine: 'engine.md'
+    - Match: 'match.md'
+    - Gui: 'gui.md'
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: numpy
+            show_submodules: false
+            show_root_heading: true
+            show_source: false
+            show_signature_annotations: true
