@@ -19,10 +19,6 @@ class CheckedEngine(BaseEngine):
         ----------
         engine: BaseEngine
             The engine object to be checked.
-
-        Returns:
-        --------
-        None
         """
         self.engine = engine
 
