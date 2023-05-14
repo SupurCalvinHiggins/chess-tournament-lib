@@ -5,7 +5,7 @@ class BaseGui(abc.ABC):
     """
     Abstract base class for chess GUI implementations.
 
-    Methods:
+    Methods
     -------
     start() -> None
         Starts the GUI.

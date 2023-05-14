@@ -15,9 +15,9 @@ class CheckedEngine(BaseEngine):
         """
         Initializes a CheckedEngine object.
 
-        Parameters:
-        -----------
-        engine : BaseEngine
+        Parameters
+        ----------
+        engine: BaseEngine
             The engine object to be checked.
 
         Returns:
@@ -30,20 +30,20 @@ class CheckedEngine(BaseEngine):
         """
         Returns the best move found by the engine, ensuring it is legal in the current chess board state.
 
-        Parameters:
-        -----------
-        board : chess.Board
+        Parameters
+        ----------
+        board: chess.Board
             The current chess board state.
-        time : Optional[float]
+        time: Optional[float]
             The maximum amount of time to spend searching for a move. If None, there is no time limit.
 
-        Returns:
-        --------
-        result : EngineResult
+        Returns
+        -------
+        result: EngineResult
             The engine result, including the best move found and the associated evaluation.
 
-        Raises:
-        -------
+        Raises
+        ------
         AssertionError:
             If the game is over or if the move found by the engine is illegal in the current board state.
         """

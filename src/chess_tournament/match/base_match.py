@@ -15,8 +15,8 @@ class BaseMatch(abc.ABC):
 
         Parameters
         ----------
-        gui_callback : GuiCallback
-           The callback function to be called when a move is made in the game.
+        gui_callback: GuiCallback
+            The callback function to be called when a move is made in the game.
         """
 
     @abc.abstractmethod
@@ -27,7 +27,7 @@ class BaseMatch(abc.ABC):
 
         Parameters
         ----------
-        board : chess.Board
+        board: chess.Board
             The starting position of the game.
 
         Returns

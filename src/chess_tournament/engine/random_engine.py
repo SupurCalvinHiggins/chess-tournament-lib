@@ -14,16 +14,16 @@ class RandomEngine(BaseEngine):
         """
         Returns a random legal move for the current chess board state.
 
-        Parameters:
-        -----------
-        board : chess.Board
+        Parameters
+        ----------
+        board: chess.Board
             The current chess board state.
-        time : Optional[float]
+        time: Optional[float]
             The maximum amount of time to spend searching for a move. Ignored by the RandomEngine.
 
-        Returns:
-        --------
-        result : EngineResult
+        Returns
+        -------
+        result: EngineResult
             The engine result, including a random legal move and no evaluation score.
         """
         move = random.choice(list(board.legal_moves))

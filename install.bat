@@ -1,2 +1,2 @@
-pip install .
+pip install --upgrade --force-reinstall .
 pytest .

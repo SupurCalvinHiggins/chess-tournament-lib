@@ -20,9 +20,9 @@ class UnlimitedTimeMatch(BaseMatch):
 
         Parameters
         ----------
-        white_engine : BaseEngine
+        white_engine: BaseEngine
             The engine playing as white.
-        black_engine : BaseEngine
+        black_engine: BaseEngine
             The engine playing as black.
         """
         self.white_engine = CheckedEngine(white_engine)
@@ -35,7 +35,7 @@ class UnlimitedTimeMatch(BaseMatch):
 
         Parameters
         ----------
-        gui_callback : GuiCallback
+        gui_callback: GuiCallback
             The callback function to add to the list of callbacks.
         """
         self.gui_callbacks.append(gui_callback)
@@ -46,7 +46,7 @@ class UnlimitedTimeMatch(BaseMatch):
 
         Parameters
         ----------
-        board : chess.Board
+        board: chess.Board
             The starting board state for the game.
 
         Returns

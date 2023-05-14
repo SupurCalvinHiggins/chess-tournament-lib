@@ -13,9 +13,9 @@ class TextGui(BaseGui):
         """
         Initializes the TextGui object with a chess match object.
 
-        Parameters:
-        -----------
-        match : BaseMatch
+        Parameters
+        ----------
+        match: BaseMatch
             The chess match object to be used for the game. The TextGui object will output the moves and board positions
             from this match object.
         """
@@ -27,11 +27,11 @@ class TextGui(BaseGui):
         """
         Static method that prints the engine result and the current board position.
 
-        Parameters:
-        -----------
-        result : EngineResult
+        Parameters
+        ----------
+        result: EngineResult
             The result of the engine's search, including the best move found and (optionally) an evaluation score.
-        board : chess.Board
+        board: chess.Board
             The current board position.
         """
         print(f"result = {result}")
