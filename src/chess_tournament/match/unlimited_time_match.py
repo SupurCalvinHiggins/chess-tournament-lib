@@ -1,5 +1,5 @@
 import chess
-from ..gui.gui_callback import GuiCallback
+from .gui_callback import GuiCallback
 from .base_match import BaseMatch
 from ..engine.base_engine import BaseEngine
 from ..engine.checked_engine import CheckedEngine

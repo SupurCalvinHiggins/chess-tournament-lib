@@ -1,6 +1,6 @@
 import abc
 import chess
-from ..gui.gui_callback import GuiCallback
+from .gui_callback import GuiCallback
 
 
 class BaseMatch(abc.ABC):
