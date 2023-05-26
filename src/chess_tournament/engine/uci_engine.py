@@ -10,7 +10,7 @@ class UciEngine(BaseEngine):
     A wrapper for UCI engines like Stockfish.
     """
 
-    def __init__(self, engine_path: str, engine_depth: Optional[int], mate_score: int = 1_000) -> None:
+    def __init__(self, engine_path: str, engine_depth: Optional[int], mate_score: int = 25) -> None:
         """
         Construct a new UciEngine. Must be used as a context manager.
 
@@ -21,7 +21,7 @@ class UciEngine(BaseEngine):
         engine_depth: Optional[int]
             The maximum depth the UCI engine is allowed to search. If None, no depth constraints.
         mate_score: int
-            Centipawn value to clamp engine scores. Defaults to 1000.
+            Pawn value to clamp engine scores. Defaults to 25.
         """
         self.engine: Optional[chess.engine.SimpleEngine] = None
         self.engine_path = engine_path
@@ -62,6 +62,11 @@ class UciEngine(BaseEngine):
 
         limit = chess.engine.Limit(depth=self.engine_depth, time=time)
         result = self.engine.play(board, limit, info=chess.engine.INFO_SCORE)
-        score = result.info["score"].white().score(mate_score=self.mate_score) / 100.0
+        score_obj = result.info["score"].white()
+        if score_obj.is_mate():
+            score = -self.mate_score if score_obj < chess.engine.Cp(0) else self.mate_score
+        else:
+            score = score_obj.score() / 100.0
+            score = max(-self.mate_score, score) if score < 0 else min(self.mate_score, score)
         move = result.move
-        return EngineResult(move, score=score)
+        return EngineResult(move=move, score=score)
