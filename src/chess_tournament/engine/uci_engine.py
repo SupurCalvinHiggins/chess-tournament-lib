@@ -62,6 +62,6 @@ class UciEngine(BaseEngine):
 
         limit = chess.engine.Limit(depth=self.engine_depth, time=time)
         result = self.engine.play(board, limit, info=chess.engine.INFO_SCORE)
-        score = result.info["score"].white().score(mate_score=self.mate_score)
+        score = result.info["score"].white().score(mate_score=self.mate_score) / 100.0
         move = result.move
         return EngineResult(move, score=score)
