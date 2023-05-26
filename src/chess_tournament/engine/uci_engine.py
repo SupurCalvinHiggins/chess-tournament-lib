@@ -32,7 +32,7 @@ class UciEngine(BaseEngine):
         """
         Spawns the UCI engine.
         """
-        self.engine = chess.engine.SimpleEngine.popen_uci(self.engine_path) # "C:\\stockfish\\stockfish.exe"
+        self.engine = chess.engine.SimpleEngine.popen_uci(self.engine_path)
 
     def __exit__(self, exc_type, exc_val, exc_tb) -> None:
         """
