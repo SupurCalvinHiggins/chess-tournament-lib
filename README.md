@@ -2,7 +2,9 @@
 
 Some utilities for a simple custom chess engine tournament with the `chess` package.
 
-## Overview
+## Documentation
+
+Documentation can be found [here](https://chess-tournament.readthedocs.io/en/latest/)
 
 ## Installation
 
